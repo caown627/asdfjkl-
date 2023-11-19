@@ -1,0 +1,62 @@
+<html>
+    <head>
+    <title>input the password</title>
+</head>
+<body>
+    <div class="container" style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: 'Gugi';
+    ">
+        <input type="text" id="cstm" style="
+        font-family: 'gugi';
+        border-radius: 4px;
+        ">
+    </div>
+
+    <div class="container" style="display: flex; align-items: center; flex-direction: column;">
+        <button onclick="checkvl()" style="
+            width: 130px; /* px를 추가하여 픽셀 단위로 지정 */
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 2px solid pink;
+            color: pink;
+            background-color: transparent;
+            font-size: 15px; /* px를 추가하여 픽셀 단위로 지정 */
+            font-family: 'Gugi'; /* 폰트명을 작은 따옴표로 감싸고 폰트 패밀리에 추가 */
+        ">입력</button>
+    </div>
+
+    <div class="container" style="display: flex; align-items: center; flex-direction: column;">
+        <p id="displayCustomValue" 
+        style="font-family: 'gugi';">
+        </p>
+
+    </div>
+
+    <a href="https://url.kr/u762vi" style="opacity: 0.05; margin-left: 100px; margin-top: 100px;">click</a>
+
+    <script>
+        function checkvl() {
+            var userValue = document.getElementById('cstm').value;
+            var displayMessage = "";
+
+            if (userValue === '840') {
+                displayMessage = "정답!";
+            } else {
+                displayMessage = "오답!";
+            }
+
+            document.getElementById('displayCustomValue').innerText = displayMessage;
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
